@@ -45,8 +45,25 @@ Email: <br>
 <input type="text" size="30" onFocus="makeFieldYellow();" onBlur="makeFieldWhite();">
 
 
-
+<!-- chapter no  49 reading field value  -->
  
+<form>
+    Email:
+    <input type="text" id="email">
+    <input type="submit" value="submit">
+</form>
+
+
+<form onsubmit="checkAdress('email')">
+Email:
+<input type="text" id="email">
+<input type="submit" value="submit">
+</form>
+
+
+
+
+
 <script>
     //  45 Events links:
     function popup (message){
@@ -54,6 +71,20 @@ Email: <br>
 
     }
    
+//    49 reading field value
+
+function checkAdress(fieldId){
+    if (document.getElementById(fieldId).value === ""){
+        alert ("Email adress required.");
+    }
+}
+
+function checkAdress(fieldId){
+    var val = document.getElementById(fieldId).value;
+    if (val ===""){
+        alert ("Email address required.");
+    }
+}
 </script>
 
 </body>
