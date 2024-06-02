@@ -47,22 +47,31 @@ Email: <br>
 
 <!-- chapter no  49 reading field value  -->
  
-<form>
+<!-- <form>
     Email:
     <input type="text" id="email">
     <input type="submit" value="submit">
-</form>
+</form> -->
 
 
-<form onsubmit="checkAdress('email')">
+ <form onsubmit="checkAdress('email')">
 Email:
 <input type="text" id="email">
 <input type="submit" value="submit">
+</form> 
+
+<!-- chapter on 50 seeting field values -->
+<form>
+zip: <br>
+<input type="text" id="zip" onBlur="fillcity();"> <br>
+city: <br>
+<input type="text"  id="city">
 </form>
 
-
-
-
+<!-- ch no 51 Reading and setting paragraph -->
+<p id="slowloris">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint 
+    <a href="javascript:void(0);" onclick="expandloris();"><em>click for more.</em></a>
 
 <script>
     //  45 Events links:
@@ -84,6 +93,40 @@ function checkAdress(fieldId){
     if (val ===""){
         alert ("Email address required.");
     }
+}
+
+// 50 seeting field value
+
+function fillcity(){
+    var cityName;
+    var zipEntered = document.getElementById("zip").value;
+    switch (zipEntered){
+        case "37250":
+            cityName ="jaranwala";
+            break;
+            case "38000":
+                cityName = "faislabad";
+                break;
+                case "41000":
+                    cityName = "okra";
+    }
+    document.getElementById("city").value = cityName;
+}
+
+// 51 reading andsetting paragraph
+
+function expandloris(){
+    var expandedparagraph = "Slow lorises are a group of several species of trepsirrhine primates whichmake up the genus Nycticebus. They have a round head, narrow snout, large eyes, and a variety ofdistinctive coloration patterns that are species-dependent. The hands and feet of slow lorises have severaladaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time.Slow lorises have a toxic bite, a rare trait among mammals";
+    document.getElementById("slowloris").innerHTML = expandedparagraph;
+
+    }
+    function placeAList(){
+        var listToPlace = "<ol><li> Slow lorise</li><li>kFast loris </li>  <li> Just-right loris </li></ol>";
+        document.getElementById("lorisLisrt").innerHTML =listToPlace;
+    }
+
+function peekAtContent(){
+    var whatThere = document.getElementById("content").innerHTML;
 }
 </script>
 
