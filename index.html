@@ -72,7 +72,18 @@ city: <br>
 <p id="slowloris">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint 
     <a href="javascript:void(0);" onclick="expandloris();"><em>click for more.</em></a>
+    <br> <br>
+<!-- ch no 52 manipluting img and text -->
 
+<!-- <img src="/fish img.jfif" alt="fish img" id="ugly" onclick="makeInvisible();"> -->
+<img src="/fish img.jfif" id="ugly" onClick="makeInvisible();">
+
+
+
+
+
+
+    <!-- javascript code  -->
 <script>
     //  45 Events links:
     function popup (message){
@@ -128,6 +139,25 @@ function expandloris(){
 function peekAtContent(){
     var whatThere = document.getElementById("content").innerHTML;
 }
+
+// 52 manipluting img and text
+
+// function makeInvisible(){
+//     document.getElementById("fish").className = "hidden";
+// }
+function makeInvisible() {
+ document.getElementById("ugly") .className = "hidden";
+}
+
+function makeBig() {
+ document.getElementById("p1").className += " big";
+ }
+
+
+
+
+
+
 </script>
 
 </body>
