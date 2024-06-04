@@ -76,10 +76,13 @@ city: <br>
 <!-- ch no 52 manipluting img and text -->
 
 <!-- <img src="/fish img.jfif" alt="fish img" id="ugly" onclick="makeInvisible();"> -->
-<img src="/fish img.jfif" id="ugly" onClick="makeInvisible();">
 
+<img id="myImage" src="/fish img.jfif" alt="Clickable Image">
+<br>
 
-
+<!-- ch no 53 swaping img -->
+<!-- <img src="/swap img.jfif" alt="before img" id="before img " onMouseover="swapPic(id,'swap img 2.jfif');"> -->
+<img src="/swap img.jfif" id="before" onMouseover="swapPic(id,'swap img 2.jfif');">
 
 
 
@@ -142,19 +145,17 @@ function peekAtContent(){
 
 // 52 manipluting img and text
 
-// function makeInvisible(){
-//     document.getElementById("fish").className = "hidden";
+  document.getElementById("myImage").addEventListener("click", function() {
+    this.src = this.src === "fish img.jfif" ? "cooding img 2.jfif" : "cooding img 2.jfif";
+  });
+
+//   53 swaping img
+// function swapPic(){
+//     document.getElementById("berore img").src = "swap img 2.jfif";
 // }
-function makeInvisible() {
- document.getElementById("ugly") .className = "hidden";
-}
-
-function makeBig() {
- document.getElementById("p1").className += " big";
+function swapPic(eId, newPic) {
+ document.getElementById(eId).src = newPic;
  }
-
-
-
 
 
 
