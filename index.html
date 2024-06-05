@@ -82,8 +82,17 @@ city: <br>
 
 <!-- ch no 53 swaping img -->
 <!-- <img src="/swap img.jfif" alt="before img" id="before img " onMouseover="swapPic(id,'swap img 2.jfif');"> -->
-<img src="/swap img.jfif" id="before" onMouseover="swapPic(id,'swap img 2.jfif');">
+<!-- <img src="/swap img.jfif" id="before" onMouseover="swapPic(id,'swap img 2.jfif');"> <br> -->
+<br>
+<img id="image1" src="/swap img.jfif" alt="First Image">
+<img id="image2" src="/swap img 2.jfif" alt="Second Image">
+<br>
+<button onclick="swapImages()">Swap Images</button>
+<br>
 
+<!-- ch on 54 swaping immges and setting classes  -->
+
+<img src="/swap img 2.jfif" alt="swap img " id="before1">
 
 
     <!-- javascript code  -->
@@ -153,10 +162,32 @@ function peekAtContent(){
 // function swapPic(){
 //     document.getElementById("berore img").src = "swap img 2.jfif";
 // }
-function swapPic(eId, newPic) {
- document.getElementById(eId).src = newPic;
+// function swapPic(eId, newPic) {
+//  document.getElementById(eId).src = newPic;
+//  }
+ function swapImages() {
+            var img1 = document.getElementById('image1');
+            var img2 = document.getElementById('image2');
+            var tempSrc = img1.src;
+            img1.src = img2.src;
+            img2.src = tempSrc;
+        }
+//54 swaping imgd and etting classes
+
+function swapPic(){
+    var pic = document.getElementById("before1");
+    pic.scr = "swap img.jfif";
+}
+
+function getAddress() {
+ var link = document.getElementById("link1");
+ var address = link.href;
  }
 
+ function enlargeForm() {
+var frm = document.getElementById("link1");
+ frm.className = "jumbo";
+}
 
 
 </script>
